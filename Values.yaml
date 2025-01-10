@@ -1,5 +1,5 @@
 deployment:
-
+  
   autoscaling:
     enabled:
   replicaCount:
@@ -41,6 +41,11 @@ deployment:
  tolerations:
   
 ingress:
-    className:
-    hosts:
+  annotations:  
+  className:
+  hosts:
+
+service:
+  type:
+  port:
   
