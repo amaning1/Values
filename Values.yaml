@@ -1,0 +1,46 @@
+deployment:
+
+  autoscaling:
+    enabled:
+  replicaCount:
+  podAnnotations:
+  imagePullSecrets: 
+  podSecurityContext:
+  securityContext:
+  image:
+      repository:
+      tag:
+      pullPolicy:   
+  env:
+    auth0Domain:
+    auth0ClientID:
+    auth0Audience:
+    githubClientID:
+    githubClientSecret:
+    mongoDBUrl:
+    viteAuth0ClientID:
+    auth0ClientSecret:
+    viteProxyUrl:
+    viteBaseUrl:
+    viteServerUrl:
+    vitewoodchipAud:
+    viteShowHeader:
+    woodchipAud:
+    IssuerUrl:
+    mailgunApiKey :
+    mailgunDomain :
+    mailgunFromEmail:
+    mailgunToEmail:
+    mailgunTitle: 
+    smtpUser:
+    smtpPassword:
+    smtpHost:
+    mailerName:
+ resources:   
+ affinity:
+ tolerations:
+  
+ingress:
+    className:
+    hosts:
+  
