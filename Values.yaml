@@ -8,34 +8,65 @@ deployment:
   podSecurityContext:
   securityContext:
   image:
-      repository:
-      tag:
-      pullPolicy:   
+    repository:
+    tag:
+    pullPolicy:   
   env:
-    auth0Domain:
-    auth0ClientID:
-    auth0Audience:
-    githubClientID:
-    githubClientSecret:
-    mongoDBUrl:
-    viteAuth0ClientID:
-    auth0ClientSecret:
-    viteProxyUrl:
-    viteBaseUrl:
-    viteServerUrl:
-    vitewoodchipAud:
-    viteShowHeader:
-    woodchipAud:
-    IssuerUrl:
-    mailgunApiKey :
-    mailgunDomain :
-    mailgunFromEmail:
-    mailgunToEmail:
-    mailgunTitle: 
-    smtpUser:
-    smtpPassword:
-    smtpHost:
-    mailerName:
+    - name: "AUTH0_DOMAIN"
+      value: $AUTH0_DOMAIN
+    - name: "AUTH0_CLIENTID"
+      value: $AUTH0_CLIENTID
+    - name: "AUTH0_AUDIENCE"
+      value: $AUTH0_AUDIENCE
+    - name: "VITE_GITHUB_CLIENT_ID"
+      value: $GITHUB_CLIENT_ID
+    - name: "GITHUB_CLIENT_SECRET"
+      value: $GITHUB_CLIENT_SECRET
+    - name: "MONGO_DB_URL"
+      value: $MONGO_DB_URL
+    - name: "VITE_AUTH0_DOMAIN"
+      value: $AUTH0_DOMAIN
+    - name: "VITE_AUTH0_CLIENTID"
+      value: $VITE_AUTH0_CLIENTID
+    - name: "AUTH0_CLIENT_SECRET"
+      value: $AUTH0_CLIENT_SECRET
+    - name: "VITE_AUTH0_AUDIENCE"
+      value: $AUTH0_AUDIENCE
+    - name: "VITE_PROXY_BASEURL"
+      value: $VITE_PROXY_BASEURL
+    - name: "VITE_FRONTEND_BASEURL"
+      value: $VITE_FRONTEND_BASEURL
+    - name: "VITE_SERVER_BASEURL"
+      value: $VITE_SERVER_BASEURL
+    - name: "VITE_WOODCHIP_API_AUDIENCE"
+      value: $VITE_WOODCHIP_API_AUDIENCE
+    - name: "VITE_SHOW_HEADER"
+      value: $VITE_SHOW_HEADER
+    - name: "WOODCHIP_API_AUDIENCE"
+      value: $WOODCHIP_API_AUDIENCE
+    - name: "AUTH0_ISSUER_BASEURL"
+      value: $AUTH0_ISSUER_BASEURL
+    - name: "NODE_TLS_REJECT_UNAUTHORIZED"
+      value: "0"
+    - name: "MAILGUN_API_KEY"
+      value: $MAILGUN_API_KEY
+    - name: "MAILGUN_DOMAIN"
+      value: $MAILGUN_DOMAIN
+    - name: "MAILGUN_FROM_EMAIL"
+      value: $MAILGUN_FROM_EMAIL
+    - name: "MAILGUN_TO_EMAIL"
+      value: $MAILGUN_TO_EMAIL
+    - name: "MAILGUN_TITLE"
+      value: $MAILGUN_TITLE
+    - name: "SMTP_USER"
+      value: $SMTP_USER
+    - name: "SMTP_PASSWORD"
+      value: $SMTP_PASSWORD
+    - name: "SMTP_HOST"
+      value: $SMTP_HOST
+    - name: "MAILER_NAME"
+      value: $MAILER_NAME     
+
  resources:   
  affinity:
  tolerations:
